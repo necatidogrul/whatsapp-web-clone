@@ -1,0 +1,121 @@
+{
+  "messages": [
+    {
+      "id": "2",
+      "sender": "2",
+      "receiver": "1",
+      "message": "Selam, Necati!",
+      "timestamp": "2024-05-30T10:01:00Z"
+    },
+    {
+      "id": "4",
+      "sender": "3",
+      "receiver": "1",
+      "message": "Selam, Necati!",
+      "timestamp": "2024-05-30T11:05:00Z"
+    },
+    {
+      "id": "5",
+      "sender": "1",
+      "receiver": "4",
+      "message": "Good morning, Semih!",
+      "timestamp": "2024-05-30T09:00:00Z"
+    },
+    {
+      "id": "6",
+      "sender": "4",
+      "receiver": "1",
+      "message": "Good morning, Necati!",
+      "timestamp": "2024-05-30T09:05:00Z"
+    },
+    {
+      "id": "7",
+      "sender": "3",
+      "receiver": "2",
+      "message": "Hey User 2, how are you?",
+      "timestamp": "2024-05-31T12:00:00Z"
+    },
+    {
+      "id": "8",
+      "sender": "2",
+      "receiver": "3",
+      "message": "I'm fine, User 3. How about you?",
+      "timestamp": "2024-05-31T12:05:00Z"
+    },
+    {
+      "id": "6ee8",
+      "sender": "1",
+      "receiver": "3",
+      "message": "Merhaba hocam",
+      "timestamp": "2024-05-31T11:24:13.729Z"
+    },
+    {
+      "id": "1fd4",
+      "sender": "1",
+      "receiver": "3",
+      "message": "Nasılsınız",
+      "timestamp": "2024-05-31T11:24:16.486Z"
+    },
+    {
+      "id": "f895",
+      "sender": "1",
+      "receiver": "2",
+      "message": "Merhaba hocammmmm",
+      "timestamp": "2024-05-31T11:24:32.118Z"
+    },
+    {
+      "id": "703e",
+      "sender": "1",
+      "receiver": "2",
+      "message": "Nasılsınız hocam",
+      "timestamp": "2024-05-31T12:02:15.807Z"
+    },
+    {
+      "id": "7fba",
+      "sender": "1",
+      "receiver": "2",
+      "message": "Selamlar",
+      "timestamp": "2024-05-31T12:51:02.294Z"
+    },
+    {
+      "id": "afd9",
+      "sender": "1",
+      "receiver": "3",
+      "message": "asdadasdasdasd",
+      "timestamp": "2024-05-31T16:45:14.417Z"
+    },
+    {
+      "id": "a55b",
+      "sender": "1",
+      "receiver": "2",
+      "message": "selam hocam",
+      "timestamp": "2024-05-31T16:49:32.764Z"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Necati",
+      "profile_picture": "images/profile1.png",
+      "status": "Available"
+    },
+    {
+      "id": "2",
+      "name": "Varol Maksutoglu",
+      "profile_picture": "https://avatars.githubusercontent.com/u/3173292?v=4",
+      "status": "Busy"
+    },
+    {
+      "id": "3",
+      "name": "Tarık Yesilcimen",
+      "profile_picture": "https://media.licdn.com/dms/image/D4D03AQG4e9rrgOSVNg/profile-displayphoto-shrink_800_800/0/1670176386659?e=1722470400&v=beta&t=Wh_M-2URaYyNeHi9AurExR6G7kpulkBKYDjMtKysJuA",
+      "status": "At the gym"
+    },
+    {
+      "id": "4",
+      "name": "Semih Yucel",
+      "profile_picture": "https://media.licdn.com/dms/image/D4D03AQGL55rpgbZtYA/profile-displayphoto-shrink_800_800/0/1675580231746?e=1722470400&v=beta&t=YGgL4wgVxaKcpTWeEvLYWxdpc82c0rlRJivMugN85y4",
+      "status": "On vacation"
+    }
+  ]
+}
