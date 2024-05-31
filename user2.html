@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhatsApp Clone</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <div class="top">
+          <img src="images/chats.svg" alt="" />
+          <img src="images/person.svg" alt="" />
+          <img src="images/story.svg" alt="" />
+          <img src="images/channels.svg" alt="" />
+        </div>
+        <div class="end">
+          <img src="images/settings.svg" alt="" />
+          <img src="images/story.svg" alt="" />
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="header">Chats</div>
+        <div class="chat-list" id="chat-list">
+          <div class="chat-item" data-chat="user1">User 1</div>
+        </div>
+      </div>
+      <div class="chat-window" id="chat-window">
+        <div class="chat-header" id="chat-header">Select a chat</div>
+        <div class="chat-messages" id="chat-messages"></div>
+        <div class="chat-input">
+          <input type="text" id="message-input" placeholder="Type a message" />
+          <button id="send-button">Send</button>
+        </div>
+      </div>
+    </div>
+    <script src="script-user2.js"></script>
+  </body>
+</html>
