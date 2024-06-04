@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const currentUser = "1"; // currentUser id is now "1"
+  const currentUser = "1";
   const chatList = document.getElementById("chat-list");
   const chatHeader = document.getElementById("chat-header");
   const chatMessages = document.getElementById("chat-messages");
@@ -28,16 +28,20 @@ document.addEventListener("DOMContentLoaded", () => {
     while (parent.firstChild) {
       parent.removeChild(parent.firstChild);
     }
+
+    // parent.forEach(() => {
+    //   parent.removeChild(parent.firstChild);
+    // });
   }
 
   async function loadUsers() {
     try {
       const response = await fetch("http://localhost:3000/users");
       const usersData = await response.json();
-      users = usersData.reduce((acc, user) => {
-        acc[user.id] = user;
-        return acc;
-      }, {});
+
+      usersData.forEach((user) => {
+        users[user.id] = user;
+      });
     } catch (error) {
       console.error("Error loading users:", error);
     }
@@ -209,6 +213,8 @@ document.addEventListener("DOMContentLoaded", () => {
           editInput.value = originalMessage;
           editInput.dataset.id = message.id;
 
+          const saveCancel = createElement("div", ["save-cancel"], [], "");
+
           const saveEditButton = createElement(
             "button",
             ["save-edit-button"],
@@ -227,8 +233,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
           removeAllChildNodes(messageElement);
           messageElement.appendChild(editInput);
-          messageElement.appendChild(saveEditButton);
-          messageElement.appendChild(cancelEditButton);
+          saveCancel.appendChild(saveEditButton);
+          saveCancel.appendChild(cancelEditButton);
+          messageElement.appendChild(saveCancel);
 
           saveEditButton.addEventListener("click", () => {
             const newMessageContent = editInput.value.trim();
@@ -261,7 +268,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function sendMessage() {
-    if (messageInput.value.trim() === "" || !selectedChat) return;
+    if (messageInput.value.trim() === "") return;
 
     const newMessage = {
       sender: currentUser,
@@ -318,13 +325,13 @@ document.addEventListener("DOMContentLoaded", () => {
       body: JSON.stringify({ message: newMessageContent }),
     })
       .then(() => {
-        const messageIndex = allMessages.findIndex(
+        const messageIndex = allMessages.find(
           (message) => message.id === messageId
         );
         allMessages[messageIndex].message = newMessageContent;
         updateChats();
         if (selectedChat) {
-          const selectedMessageIndex = selectedChat.messages.findIndex(
+          const selectedMessageIndex = selectedChat.messages.find(
             (message) => message.id === messageId
           );
           selectedChat.messages[selectedMessageIndex].message =

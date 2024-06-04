@@ -232,6 +232,8 @@ body {
 
 #message-input {
   background-color: #2a3942;
+  border: none;
+  outline: none;
 }
 
 .options-icon {
@@ -270,6 +272,15 @@ body {
   width: 100%;
   padding: 5px;
   margin-bottom: 5px;
+  background-color: #9fcac2;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.save-cancel {
+  text-align: center;
 }
 
 #send-button {
@@ -284,11 +295,7 @@ body {
   outline: none;
   border: none;
   border-radius: 5px;
-}
-
-.save-edit-button:hover,
-.cancel-edit-button:hover {
-  background-color: #f0f0f0;
+  background-color: rgb(32, 142, 69);
 }
 
 ::-webkit-scrollbar {
